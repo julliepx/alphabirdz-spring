@@ -12,3 +12,11 @@ Incialmente como ficarão as tabelas juntamente com as classes java.
 ![Database Tables](./assets/img/databese_tables.png)
 
 #
+
+### Colaboradores
+
+- [Ariel Q.](https://gitlab.com/quaresmina)
+- [Jullie P.](https://gitlab.com/julliepx)
+- [Kalebe N.](https://gitlab.com/kalNascimento)
+
+#
