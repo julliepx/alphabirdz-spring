@@ -1,15 +1,16 @@
 package com.alphabirdz.model;
 
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-//@Entity
+
+@Entity
 public class Bird {
 
-    //@Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String englishName;
     private String latinName;
@@ -22,8 +23,8 @@ public class Bird {
 
 
 
-    public Bird(Long id, String englishName, String latinName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
-        this.id = id;
+
+    public Bird(String englishName, String latimName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
         this.englishName = englishName;
         this.latinName = latinName;
         this.portugueseName = portugueseName;
