@@ -19,7 +19,7 @@ public class BirdRestController {
     public Bird getBird(@RequestParam(value = "id") int id){
         List <Bird> birdList = new ArrayList<>();
 
-        birdList.add(new Bird(1L, "Maguari Stork", "Ciconia maguari", "João-grande", "White", "Campo alagado e campo seco baixo", "Ciconnidae", "85 cm"));
+        birdList.add(new Bird("Maguari Stork", "Ciconia maguari", "João-grande", "White", "Campo alagado e campo seco baixo", "Ciconnidae", "85 cm"));
 
         return birdList.get(id);
     }
