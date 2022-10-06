@@ -1,16 +1,18 @@
-package com.alphabirdz;
+package com.alphabirdz.controller;
 
 //import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
+//import java.util.concurrent.atomic.AtomicLong;
 //import java.util.logging.Logger;
+
+import com.alphabirdz.model.Bird;
 
 @RestController
 public class BirdRestController {
-    //private Logger logger = Logger.getLogger(BirdRestController.class.getCanonicalName());
+    // private Logger logger = Logger.getLogger(BirdRestController.class.getCanonicalName());
 
 
     @GetMapping( "/bird")
