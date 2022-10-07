@@ -13,7 +13,7 @@ public class Bird {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String englishName;
-    private String latimName;
+    private String latinName;
     private String portugueseName;
     private String dominantColor;
     private String gender;
@@ -24,9 +24,9 @@ public class Bird {
 
 
 
-    public Bird(String englishName, String latimName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
+    public Bird(String englishName, String latinName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
         this.englishName = englishName;
-        this.latimName = latimName;
+        this.latinName = latinName;
         this.portugueseName = portugueseName;
         this.dominantColor = dominantColor;
         this.habitat = habitat;
@@ -46,8 +46,8 @@ public class Bird {
         return englishName;
     }
 
-    public String getLatimName() {
-        return latimName;
+    public String getLatinName() {
+        return latinName;
     }
 
     public String getPortugueseName() {
@@ -72,5 +72,10 @@ public class Bird {
 
     public String getBirdSize() {
         return birdSize;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("Bird [id = %d, English name = %s]", this.id, this.englishName);
     }
 }
