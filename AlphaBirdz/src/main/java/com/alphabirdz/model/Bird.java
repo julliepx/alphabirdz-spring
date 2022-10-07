@@ -21,9 +21,6 @@ public class Bird {
     private String family;
     private String birdSize;
 
-
-
-
     public Bird(String englishName, String latimName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
         this.englishName = englishName;
         this.latimName = latimName;
