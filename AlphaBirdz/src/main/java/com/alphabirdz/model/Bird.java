@@ -23,13 +23,8 @@ public class Bird {
 
 
 
-<<<<<<< HEAD
-    public Bird(Long id, String englishName, String latimName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
-        this.id = id;
-=======
 
     public Bird(String englishName, String latimName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
->>>>>>> bd52b12aaa8d05f922e3d2030ceebda86ddd5cca
         this.englishName = englishName;
         this.latimName = latimName;
         this.portugueseName = portugueseName;
