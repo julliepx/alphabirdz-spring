@@ -1,6 +1,12 @@
 package com.alphabirdz.controller;
 
-//import org.springframework.http.MediaType;
+import java.util.logging.Logger;
+
+import com.alphabirdz.repository.acessingdatajpa.BirdRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -10,17 +16,21 @@ import java.util.List;
 
 import com.alphabirdz.model.Bird;
 
-@RestController
+@RestController("/bird")
 public class BirdRestController {
-    // private Logger logger = Logger.getLogger(BirdRestController.class.getCanonicalName());
 
+    private Logger info = Logger.getLogger(BirdRestController.class.getCanonicalName());
 
-    @GetMapping( "/bird")
-    public Bird getBird(@RequestParam(value = "id") int id){
-        List <Bird> birdList = new ArrayList<>();
+    @Autowired
+    private BirdRepository birdRepository;
 
-        birdList.add(new Bird("Maguari Stork", "Ciconia maguari", "João-grande", "White", "Campo alagado e campo seco baixo", "Ciconnidae", "85 cm"));
-
-        return birdList.get(id);
+    @RequestMapping( value = "/{birdId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Bird> getBird(@PathVariable("birdId") long birdId){
+        info.info(String.format("getBird: %s", birdId));
+        final Bird bird = birdRepository.findById(birdId);
+        if(bird == null){
+            return new ResponseEntity<Bird>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<Bird>(bird, HttpStatus.OK);
     }
 }

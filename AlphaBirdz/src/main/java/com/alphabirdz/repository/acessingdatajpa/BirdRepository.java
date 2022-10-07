@@ -10,4 +10,5 @@ public interface BirdRepository extends CrudRepository<Bird, Long> {
     List<Bird> findByEnglishName(String englishName);
 
     Bird findById(long id);
+
 }
