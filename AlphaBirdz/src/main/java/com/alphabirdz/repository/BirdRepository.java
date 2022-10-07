@@ -1,14 +1,14 @@
 package com.alphabirdz.repository;
 
 import com.alphabirdz.model.Bird;
-import org.springframework.dao.DataAccessException;
+import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
-public interface BirdRepository {
 
-    Bird findById(Long id) throws DataAccessException;
+public interface BirdRepository extends CrudRepository<Bird, Long> {
 
-    Bird findAll();
+    List<Bird> findByEnglishName(String englishName);
 
-    void save(Bird bird) throws DataAccessException;
+    Bird findById(long id);
 
 }
