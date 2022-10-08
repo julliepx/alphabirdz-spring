@@ -6,8 +6,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 import com.alphabirdz.model.Bird;
 import com.alphabirdz.repository.BirdRepository;
 
@@ -28,11 +26,16 @@ public class BirdRestController {
     }
 
     @RequestMapping( value = "/enname/{birdEnName}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Bird>> getBirdByEnName(final @PathVariable String birdEnName){
-        List<Bird> bird = birdRepository.findByEnglishName(birdEnName);
+    public ResponseEntity<Bird> getBirdByEnName(final @PathVariable String birdEnName){
+        Bird bird = birdRepository.findByEnglishName(birdEnName);
         if(bird == null){
-            return new ResponseEntity<List<Bird>>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<Bird>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<List<Bird>>(bird, HttpStatus.OK);
+        return new ResponseEntity<Bird>(bird, HttpStatus.OK);
+    }
+
+    @RequestMapping( value = "/ison", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String isResponding(){
+        return "Server is responding to request!";
     }
 }
