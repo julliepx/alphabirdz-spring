@@ -1,6 +1,9 @@
 package com.alphabirdz.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
 @Entity
@@ -18,10 +21,7 @@ public class Bird {
     private String family;
     private String birdSize;
 
-
-
-
-    public Bird(String englishName, String latinName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
+    public Bird(String englishName, String latimName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
         this.englishName = englishName;
         this.latinName = latinName;
         this.portugueseName = portugueseName;
