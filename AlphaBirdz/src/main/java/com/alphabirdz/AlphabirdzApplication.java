@@ -13,12 +13,12 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 
-public class BirdApplication {
+public class AlphabirdzApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(BirdApplication.class);
+	private static final Logger log = LoggerFactory.getLogger(AlphabirdzApplication.class);
 	public static void main(String[] args) {
 
-		SpringApplication.run(BirdApplication.class, args);
+		SpringApplication.run(AlphabirdzApplication.class, args);
 	}
 
 	@Bean
