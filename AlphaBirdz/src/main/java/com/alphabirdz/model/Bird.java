@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Bird {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String englishName;
     private String latinName;
@@ -32,7 +32,6 @@ public class Bird {
     }
 
     protected Bird(){
-
     }
 
     public Long getId() {

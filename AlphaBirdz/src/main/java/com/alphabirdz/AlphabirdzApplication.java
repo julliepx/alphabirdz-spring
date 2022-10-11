@@ -1,13 +1,12 @@
 package com.alphabirdz;
 
 import com.alphabirdz.model.Bird;
-import com.alphabirdz.repository.acessingdatajpa.BirdRepository;
+import com.alphabirdz.repository.BirdRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 
