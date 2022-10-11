@@ -46,19 +46,19 @@ public class UserRestControllerTest {
 
     @Test
     public void getIdSuccess() throws Exception {
-        given(this.userRepository.findById(666)).willReturn(user); //PORQUE ACEITA QUALQUER ID? MANGAN
-        this.mockMvc.perform(get("/users/id/666")
+        given(this.userRepository.findById(1)).willReturn(user);
+        this.mockMvc.perform(get("/users/id/1")
                 .accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.profilePhoto").value("kalpic"))
-            .andExpect(jsonPath("$.username").value("kal")); 
+            .andExpect(jsonPath("$.username").value("kal")) 
+            .andExpect(jsonPath("$.password").value("kalpassword"));
     }
 
     @Test
     public void getIdNotFound() throws Exception {
-        given(this.userRepository.findById(666)).willReturn(null);
-        this.mockMvc.perform(get("/users/id/666")
+        given(this.userRepository.findById(2)).willReturn(null);
+        this.mockMvc.perform(get("/users/id/2")
                 .accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isNotFound());
     }
