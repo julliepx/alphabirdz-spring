@@ -20,6 +20,7 @@ CREATE TABLE posts (
     location VARCHAR(255),
     date DATE
 );
+--ALTER TABLE posts ADD CONSTRAINT fk_user FOREIGN KEY (id) REFERENCES posts (id);
 
 CREATE TABLE users (
     id INTEGER IDENTITY PRIMARY KEY,
