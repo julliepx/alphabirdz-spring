@@ -14,14 +14,6 @@ CREATE TABLE birds (
     bird_size VARCHAR(30)
 );
 
-CREATE TABLE posts (
-    id INTEGER IDENTITY PRIMARY KEY,
-    image VARCHAR(255),
-    location VARCHAR(255),
-    date DATE
-);
---ALTER TABLE posts ADD CONSTRAINT fk_user FOREIGN KEY (id) REFERENCES posts (id);
-
 CREATE TABLE users (
     id INTEGER IDENTITY PRIMARY KEY,
     profile_photo VARCHAR(255),
@@ -29,3 +21,13 @@ CREATE TABLE users (
     email VARCHAR(50) NOT NULL,
     password VARCHAR(20) NOT NULL
 );
+
+CREATE TABLE posts (
+    id INTEGER IDENTITY PRIMARY KEY,
+    image VARCHAR(255),
+    location VARCHAR(255),
+    date VARCHAR(255),
+    fk_user INTEGER,
+    fk_bird INTEGER
+);
+--ALTER TABLE posts ADD CONSTRAINT fk_user FOREIGN KEY (id) REFERENCES posts (id);
