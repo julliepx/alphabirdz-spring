@@ -13,12 +13,14 @@ repositories {
 }
 
 dependencies {
+	runtimeOnly 'org.hsqldb:hsqldb'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	testImplementation 'junit:junit:4.13.2'
 	//testImplementation 'org.junit.vintage:junit-vintage-engine'
 	runtimeOnly 'com.h2database:h2'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.junit.vintage:junit-vintage-engine'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

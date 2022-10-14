@@ -2,13 +2,12 @@ package com.alphabirdz.repository;
 
 import com.alphabirdz.model.Bird;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-
+@Repository
 public interface BirdRepository extends CrudRepository<Bird, Long> {
 
-    List<Bird> findByEnglishName(String englishName);
+    Bird findByEnglishName(String englishName);
 
     Bird findById(long id);
 

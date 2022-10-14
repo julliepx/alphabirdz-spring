@@ -1,24 +1,37 @@
 package com.alphabirdz.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "birds")
 public class Bird {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "english_name")
     private String englishName;
+
+    @Column(name = "latin_name")
     private String latinName;
+
+    @Column(name = "portuguese_name")
     private String portugueseName;
+
+    @Column(name = "dominant_color")
     private String dominantColor;
+
     private String gender;
     private String habitat;
     private String family;
+
+    @Column(name = "bird_size")
     private String birdSize;
 
     public Bird(String englishName, String latinName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
@@ -42,7 +55,7 @@ public class Bird {
         return englishName;
     }
 
-    public String getLatinName() {
+    public String getlatinName() {
         return latinName;
     }
 
