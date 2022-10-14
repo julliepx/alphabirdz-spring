@@ -45,7 +45,6 @@ public class Bird {
     }
 
     protected Bird(){
-
     }
 
     public Long getId() {
@@ -82,5 +81,10 @@ public class Bird {
 
     public String getBirdSize() {
         return birdSize;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("Bird [id = %d, English name = %s]", this.id, this.englishName);
     }
 }
