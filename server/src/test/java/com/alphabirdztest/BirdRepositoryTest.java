@@ -1,4 +1,4 @@
-package com.example.bird;
+package com.alphabirdztest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -24,8 +24,6 @@ public class BirdRepositoryTest {
         assertThat(bird.getId()).isEqualTo(1);
         assertThat(bird.getEnglishName()).isEqualTo("Maguari Stork");
     }
-
-
 }
 
 
