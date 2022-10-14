@@ -1,4 +1,4 @@
-package com.example.bird;
+package com.alphabirdztest;
 
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
