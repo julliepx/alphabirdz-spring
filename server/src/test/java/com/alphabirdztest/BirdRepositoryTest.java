@@ -1,4 +1,4 @@
-package com.example.bird;
+package com.alphabirdztest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
