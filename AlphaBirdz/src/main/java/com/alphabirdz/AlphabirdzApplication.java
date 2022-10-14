@@ -19,7 +19,7 @@ public class AlphabirdzApplication {
 
 		SpringApplication.run(AlphabirdzApplication.class, args);
 	}
-
+/*
 	@Bean
 	public CommandLineRunner demo(BirdRepository repository){
 		return (args -> {
@@ -45,8 +45,8 @@ public class AlphabirdzApplication {
 			repository.findByEnglishName("Wood Stork").forEach(stork -> {
 				log.info(stork.toString());
 			});
-		});
-	}
+		});*/
+	//}
 }
 
 
