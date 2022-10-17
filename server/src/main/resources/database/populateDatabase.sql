@@ -39,9 +39,9 @@ INSERT INTO birds(english_name, latin_name, portuguese_name, dominant_color, gen
 -- Amazonetta brasiliensis, marreca-pé-vermelho, Brazilian Teal, Família Anatidae, 35 / brown
 INSERT INTO birds(english_name, latin_name, portuguese_name, dominant_color, gender, habitat, family, bird_size) 
             VALUES ('brazilian teal', 'amazonetta brasiliensis', 'marreca-pé-vermelho', 'brown', 'female', 'wetlands', 'anatidae', '35');
--- Athene cunicularia, coruja-buraqueira, Burrowing Owl, Família Strigidae, 25 / brown
+-- Athene cunicularia, url bird image-buraqueira, Burrowing Owl, Família Strigidae, 25 / brown
 INSERT INTO birds(english_name, latin_name, portuguese_name, dominant_color, gender, habitat, family, bird_size) 
-            VALUES ('burrowing owl', 'athene cunicularia', 'coruja-buraqueira', 'brown', 'female', 'dry field', 'strigidae', '25');
+            VALUES ('burrowing owl', 'athene cunicularia', 'url bird image-buraqueira', 'brown', 'female', 'dry field', 'strigidae', '25');
 -- Chlorostilbon lucidus, besourinho-de-bico-vermelho, Glittering-bellied Emerald, Família Trochilidae, 7  / green
 INSERT INTO birds(english_name, latin_name, portuguese_name, dominant_color, gender, habitat, family, bird_size) 
             VALUES ('glittering-bellied emerald', 'chlorostilbon lucidus', 'besourinho-de-bico-vermelho', 'green', 'mele', 'bush field', 'trochilidae', '7');
@@ -77,6 +77,22 @@ INSERT INTO users(profile_photo, username, email, password)
 
 -- Populando tabela Posts
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('grifo', 'condado', '1996', 1, 1);
+            VALUES ('url bird image', 'santo domingo de cachi', '2021-09-19', 1, 10);
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('coruja', 'hogwarts', '1996', 1, 1);
+            VALUES ('url bird image', 'sorocaba', '2022-03-21', 3, 1);
+INSERT INTO posts(image, location, date ,fk_user, fk_bird)
+            VALUES ('url bird image', 'Estancia Yani Grande', '2021-05-11', 5, 18);
+INSERT INTO posts(image, location, date ,fk_user, fk_bird)
+            VALUES ('url bird image', 'Itapecerica da Serra', '2022-09-16', 2, 9);
+INSERT INTO posts(image, location, date ,fk_user, fk_bird)
+            VALUES ('url bird image', 'El Calafate', '2021-09-09', 4, 1);
+INSERT INTO posts(image, location, date ,fk_user, fk_bird)
+            VALUES ('url bird image', 'Parque Nacional Bernardo OHiggins', '2019-10-11', 3, 3);
+INSERT INTO posts(image, location, date ,fk_user, fk_bird)
+            VALUES ('url bird image', 'Pulau Kukup', '2020-09-21', 5, 6);
+INSERT INTO posts(image, location, date ,fk_user, fk_bird)
+            VALUES ('url bird image', 'sorocaba', '2021-12-27', 4, 7);
+INSERT INTO posts(image, location, date ,fk_user, fk_bird)
+            VALUES ('url bird image', 'Itapecerica da Serra', '2021-11-30', 2, 5);
+INSERT INTO posts(image, location, date ,fk_user, fk_bird)
+            VALUES ('url bird image', 'santo domingo de cachi', '2022-01-17', 1, 10);
