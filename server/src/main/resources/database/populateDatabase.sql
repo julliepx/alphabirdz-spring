@@ -64,8 +64,15 @@ INSERT INTO birds(english_name, latin_name, portuguese_name, dominant_color, gen
 
 -- Populando tabela Users
 INSERT INTO users(profile_photo, username, email, password)
-            VALUES ('kalpic', 'kal', 'kal@gmail.com', 'kalpassword');
-
+            VALUES ('url image', 'jose', 'jose@gmail.com', 'password');
+INSERT INTO users(profile_photo, username, email, password)
+            VALUES ('url image', 'lucas', 'lucas@gmail.com', 'password');
+INSERT INTO users(profile_photo, username, email, password)
+            VALUES ('url image', 'maria', 'maria@gmail.com', 'password');
+INSERT INTO users(profile_photo, username, email, password)
+            VALUES ('url image', 'chris', 'chris@gmail.com', 'password');
+INSERT INTO users(profile_photo, username, email, password)
+            VALUES ('url image', 'fernanda', 'fernanda@gmail.com', 'password');
 
 
 -- Populando tabela Posts
