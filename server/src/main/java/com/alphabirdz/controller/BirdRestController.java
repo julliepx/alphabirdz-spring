@@ -19,10 +19,13 @@ public class BirdRestController {
     @Autowired
     private BirdRepository birdRepository;
 
-    @RequestMapping( value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping( value = "/all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Bird>> getAllBirds(){
-        List<Bird> birds = birdRepository.findAll();
-        return new ResponseEntity<List<Bird>>(birds, HttpStatus.OK);
+        final List<Bird> bird = birdRepository.findAll();
+        if(bird.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(bird, HttpStatus.OK);
     }
 
     @RequestMapping( value = "/id/{birdId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
