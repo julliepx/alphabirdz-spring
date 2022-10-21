@@ -6,15 +6,24 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import com.alphabirdz.model.Bird;
 import com.alphabirdz.repository.BirdRepository;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/birds")
 public class BirdRestController {
 
     @Autowired
     private BirdRepository birdRepository;
+
+    @RequestMapping( value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Bird>> getAllBirds(){
+        List<Bird> birds = birdRepository.findAll();
+        return new ResponseEntity<List<Bird>>(birds, HttpStatus.OK);
+    }
 
     @RequestMapping( value = "/id/{birdId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Bird> getBird(final @PathVariable long birdId){
