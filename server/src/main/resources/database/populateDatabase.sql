@@ -41,7 +41,7 @@ INSERT INTO birds(english_name, latin_name, portuguese_name, dominant_color, gen
             VALUES ('brazilian teal', 'amazonetta brasiliensis', 'marreca-pé-vermelho', 'brown', 'female', 'wetlands', 'anatidae', '35');
 -- Athene cunicularia, url bird image-buraqueira, Burrowing Owl, Família Strigidae, 25 / brown
 INSERT INTO birds(english_name, latin_name, portuguese_name, dominant_color, gender, habitat, family, bird_size) 
-            VALUES ('burrowing owl', 'athene cunicularia', 'url bird image-buraqueira', 'brown', 'female', 'dry field', 'strigidae', '25');
+            VALUES ('burrowing owl', 'athene cunicularia', 'buraqueira', 'brown', 'female', 'dry field', 'strigidae', '25');
 -- Chlorostilbon lucidus, besourinho-de-bico-vermelho, Glittering-bellied Emerald, Família Trochilidae, 7  / green
 INSERT INTO birds(english_name, latin_name, portuguese_name, dominant_color, gender, habitat, family, bird_size) 
             VALUES ('glittering-bellied emerald', 'chlorostilbon lucidus', 'besourinho-de-bico-vermelho', 'green', 'mele', 'bush field', 'trochilidae', '7');
