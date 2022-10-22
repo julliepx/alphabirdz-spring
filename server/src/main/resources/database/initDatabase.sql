@@ -4,9 +4,9 @@ DROP TABLE users IF EXISTS;
 
 CREATE TABLE birds (
     id INTEGER IDENTITY PRIMARY KEY,
-    english_name VARCHAR(30),
-    latin_name VARCHAR(30),
-    portuguese_name VARCHAR(30),
+    english_name VARCHAR(100),
+    latin_name VARCHAR(100),
+    portuguese_name VARCHAR(100),
     dominant_color VARCHAR(30),
     gender VARCHAR(30),
     habitat VARCHAR(30),
