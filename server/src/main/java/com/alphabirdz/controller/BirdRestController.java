@@ -12,6 +12,7 @@ import com.alphabirdz.model.Bird;
 import com.alphabirdz.repository.BirdRepository;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/birds")
 public class BirdRestController {
 
