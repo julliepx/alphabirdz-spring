@@ -1,3 +1,24 @@
+### iniciando o projeto
+
+Considerando que já tenha instalados o gerenciador de dependências Gradle, e alguma versão do java SDK.
+
+#
+
+- Clone o repositório.
+```
+git clone https://gitlab.com/alphabirdz/alphabirdz-angular.git
+```
+- Entre no diretório.
+```
+cd alpabirdz-spring
+```
+- Inicie o servidor
+```
+./gradlew bootRun
+```
+
+#
+
 # ALPHABIRDZ
 
 Este é o servidor desenvolvido para o app Alphabirdz, uma aplicação relacionada a observação de pássaros.
