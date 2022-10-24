@@ -5,7 +5,7 @@ INSERT INTO birds(image_url, english_name, latin_name, portuguese_name, dominant
             VALUES ('https://cdn.discordapp.com/attachments/1033991589342740510/1033991694951133194/unknown.png', 'great egret', 'ardea alba', 'garça-branca-grande', 'white', '', 'wetlands', 'ardeidae', '65');
 -- Cygnus melancoryphus, cisne-de-pescoço-preto, Black-necked-swan, Família Anatidae, 80 / white
 INSERT INTO birds(image_url, english_name, latin_name, portuguese_name, dominant_color, gender, habitat, family, bird_size) 
-            VALUES ('https://cdn.discordapp.com/attachments/1033991589342740510/1033994905145577522/unknown.png', 'clack-necked-swan', 'cygnus melancoryphus', 'cisne-de-pescoço-preto', 'white', 'male', '', 'anatidae', '80');
+            VALUES ('https://cdn.discordapp.com/attachments/1033991589342740510/1033994905145577522/unknown.png', 'black-necked-swan', 'cygnus melancoryphus', 'cisne-de-pescoço-preto', 'white', 'male', '', 'anatidae', '80');
 -- Elanus leucurus, gavião-peneira, White-tailed Kite, Família Accipitridae, 35 / white
 INSERT INTO birds(image_url, english_name, latin_name, portuguese_name, dominant_color, gender, habitat, family, bird_size) 
             VALUES ('https://cdn.discordapp.com/attachments/1033991589342740510/1033996470673743934/unknown.png', 'white-tailed kite', 'elanus leucurus', 'gavião-peneira', 'white', 'female', '', 'accipitridae', '35');
