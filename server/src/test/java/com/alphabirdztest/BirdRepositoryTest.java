@@ -22,7 +22,7 @@ public class BirdRepositoryTest {
     public void shouldFindBirdById(){
         Bird bird = this.birdRepository.findById(1);
         assertThat(bird.getId()).isEqualTo(1);
-        assertThat(bird.getEnglishName()).isEqualTo("Maguari Stork");
+        assertThat(bird.getEnglishName()).isEqualTo("black-necked-swan");
     }
 
 

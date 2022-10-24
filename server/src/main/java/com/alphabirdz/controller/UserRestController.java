@@ -10,6 +10,7 @@ import com.alphabirdz.model.User;
 import com.alphabirdz.repository.UserRepository;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/users")
 public class UserRestController {
 
