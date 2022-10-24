@@ -22,6 +22,6 @@ public class PostRepositoryTest {
     public void shouldFindPostById() {
         Post post = this.postRepository.findById(0);
         assertThat(post.getId() == 0L);
-        assertThat(post.getLocation()).isEqualTo("Hogwarts");
+        assertThat(post.getLocation()).isEqualTo("santo domingo de cachi");
     }
 }

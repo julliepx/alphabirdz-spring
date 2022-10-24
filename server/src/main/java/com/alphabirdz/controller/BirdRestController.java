@@ -29,7 +29,7 @@ public class BirdRestController {
     }
 
     @RequestMapping( value = "/id/{birdId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Bird> getBird(final @PathVariable long birdId){
+    public ResponseEntity<Bird> getBirdById(final @PathVariable long birdId){
         final Bird bird = birdRepository.findById(birdId);
         if(bird == null){
             return new ResponseEntity<Bird>(HttpStatus.NOT_FOUND);
@@ -38,7 +38,7 @@ public class BirdRestController {
     }
 
     @RequestMapping( value = "/enname/{birdEnName}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Bird> getBirdByEnName(final @PathVariable String birdEnName){
+    public ResponseEntity<Bird> getBirdByEnglishName(final @PathVariable String birdEnName){
         Bird bird = birdRepository.findByEnglishName(birdEnName);
         if(bird == null){
             return new ResponseEntity<Bird>(HttpStatus.NOT_FOUND);
