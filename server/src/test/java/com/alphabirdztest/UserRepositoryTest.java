@@ -23,6 +23,6 @@ public class UserRepositoryTest {
         //Long id = 0L;
         User user = this.userRepository.findById(0L);
         assertThat(user.getId() == 0L);
-        assertThat(user.getUsername()).isEqualTo("kal");
+        assertThat(user.getUsername()).isEqualTo("jose");
     }
 }

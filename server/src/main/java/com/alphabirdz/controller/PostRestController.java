@@ -20,16 +20,16 @@ public class PostRestController {
     private PostRepository postRepository;
 
     @RequestMapping(value = "/all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Post>> getPosts(){
+    public ResponseEntity<List<Post>> getAllPosts(){
         final List<Post> post = postRepository.findAll();
-        if(post == null){
+        if(post.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
 
     @RequestMapping( value = "/id/{postId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Post> getId(final @PathVariable long postId){
+    public ResponseEntity<Post> getPostById(final @PathVariable long postId){
         final Post id = postRepository.findById(postId);
         if(id == null){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

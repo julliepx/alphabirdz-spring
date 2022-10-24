@@ -38,6 +38,7 @@ public class PostRestControllerTest {
 
     private Post post;
     private List<Post> posts = new ArrayList<Post>();
+    private List<Post> emptyPosts = new ArrayList<Post>();
     private MockMvc mockMvc;
 
     @Before
@@ -69,7 +70,7 @@ public class PostRestControllerTest {
 
     @Test
     public void testGetAllPostNotFound() throws Exception {
-        given(this.postRepository.findAll()).willReturn(null);
+        given(this.postRepository.findAll()).willReturn(emptyPosts);
         this.mockMvc.perform(get("/posts/all")
                 .accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isNotFound());

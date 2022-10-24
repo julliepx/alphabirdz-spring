@@ -46,10 +46,17 @@ public class BirdRestControllerTest {
     @Test
     public void testGetBirdSuccess() throws Exception{
         given(this.birdRepository.findById(1)).willReturn(bird);
-        this.mockMvc.perform(get("/bird/id/1").accept(MediaType.APPLICATION_JSON))
+        this.mockMvc.perform(get("/birds/id/1").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.englishName").value("Maguari Stork"))
                 .andExpect(jsonPath("$.portugueseName").value("João-grande"));
+    }
+
+    @Test
+    public void testGetBirdNotFound() throws Exception{
+        given(this.birdRepository.findById(1)).willReturn(null);
+        this.mockMvc.perform(get("/bird/id/1").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
     }
 }
