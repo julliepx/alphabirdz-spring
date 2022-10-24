@@ -4,6 +4,7 @@ DROP TABLE users IF EXISTS;
 
 CREATE TABLE birds (
     id INTEGER IDENTITY PRIMARY KEY,
+    image_url VARCHAR(255),
     english_name VARCHAR(100),
     latin_name VARCHAR(100),
     portuguese_name VARCHAR(100),
