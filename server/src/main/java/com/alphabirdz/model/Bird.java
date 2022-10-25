@@ -29,6 +29,9 @@ import javax.persistence.Table;
 @Table(name = "birds")
 public class Bird {
 
+    /**
+     * Atributes of the Bird.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -56,7 +59,7 @@ public class Bird {
     private String birdSize;
 
     /**
-     * Constructs a Bird with the given parameters.
+     * Constructs a new {@code Bird} with the specified attributes.
      * @param englishName
      * @param latinName
      * @param portugueseName
