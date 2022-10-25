@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2022, Alphabirdz. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+
 package com.alphabirdz.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +16,40 @@ import java.util.List;
 import com.alphabirdz.model.Post;
 import com.alphabirdz.repository.PostRepository;
 
+/**
+ * The {@code PostRestController} class controls requisitions,
+ * (ID's and others in this case), and returns one or more Posts.
+ * The class includes methods for returning .json of 
+ * all Posts, a Post by ID and others.
+ * <p>
+ * The class also includes a marker annotation that indicates
+ * that the annotated class is a {@code RestController} aka
+ * (RESTful service).
+ *
+ * @author Ariel Quaresma
+ * @author Jullie Paixão
+ * @author Kalebe Nascimento
+ * @see com.alphabirdz.Post
+ */
+
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/posts")
 public class PostRestController {
 
+    /**
+     * Calls the PostRepository class to use its methods.
+     */
     @Autowired
     private PostRepository postRepository;
 
+    /**
+     * Return all Birds accordingly to declared rules.
+     * <p>
+     * The method also includes a marker annotation that indicates
+     * that the annotated class uses {@code RequestMapping}
+     * which maps the URL.
+     */
     @RequestMapping(value = "/all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Post>> getAllPosts(){
         final List<Post> post = postRepository.findAll();
@@ -28,6 +59,18 @@ public class PostRestController {
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
 
+    /**
+     * Search the Post ID inserted requisition,
+     * and return the expected Post accordingly
+     * to declared rules.
+     * <p>
+     * The method also includes a marker annotation that indicates
+     * that the annotated class uses {@code RequestMapping}
+     * which maps the URL.
+     * 
+     * @param postId
+     *             The Post ID inserted.
+     */
     @RequestMapping( value = "/id/{postId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Post> getPostById(final @PathVariable long postId){
         final Post id = postRepository.findById(postId);

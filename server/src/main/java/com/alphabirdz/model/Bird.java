@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2022, Alphabirdz. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+
 package com.alphabirdz.model;
 
 import javax.persistence.Column;
@@ -6,6 +11,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+/**
+ * The {@code Bird} represents a Bird and stores its attributes.
+ * <p>
+ * The class also includes a marker annotation that indicates
+ * that the annotated class is a {@code Entity} declaring that
+ * the class is a JPA entity.
+ *
+ * @author Ariel Quaresma
+ * @author Jullie Paixão
+ * @author Kalebe Nascimento
+ * @see com.alphabirdz.BirdRepository
+ */
+
 @Entity
 @Table(name = "birds")
 public class Bird {
@@ -36,6 +55,16 @@ public class Bird {
     @Column(name = "bird_size")
     private String birdSize;
 
+    /**
+     * Constructs a Bird with the given parameters.
+     * @param englishName
+     * @param latinName
+     * @param portugueseName
+     * @param dominantColor
+     * @param habitat
+     * @param family
+     * @param birdSize
+     */
     public Bird(String englishName, String latinName, String portugueseName, String dominantColor, String habitat, String family, String birdSize) {
         this.englishName = englishName;
         this.latinName = latinName;
@@ -46,9 +75,15 @@ public class Bird {
         this.birdSize = birdSize;
     }
 
+    /**
+     * Empty constructor.
+     */
     protected Bird(){
     }
 
+    /**
+     * Getters.
+     */
     public Long getId() {
         return this.id;
     }
@@ -87,10 +122,5 @@ public class Bird {
 
     public String getBirdSize() {
         return birdSize;
-    }
-
-    @Override
-    public String toString(){
-        return String.format("Bird [id = %d, English name = %s]", this.id, this.englishName);
     }
 }
