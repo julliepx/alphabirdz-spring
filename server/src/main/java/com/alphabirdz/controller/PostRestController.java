@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.alphabirdz.model.Post;
@@ -52,11 +53,12 @@ public class PostRestController {
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Post>> getAllPosts(){
-        final List<Post> post = postRepository.findAll();
-        if(post.isEmpty()){
+        final List<Post> posts = new ArrayList<Post>(); 
+        posts.addAll(this.postRepository.findAll());
+        if(posts.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(post, HttpStatus.OK);
+        return new ResponseEntity<>(posts, HttpStatus.OK);
     }
 
     /**

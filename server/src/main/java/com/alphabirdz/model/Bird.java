@@ -5,11 +5,15 @@
 
 package com.alphabirdz.model;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -57,6 +61,9 @@ public class Bird {
 
     @Column(name = "bird_size")
     private String birdSize;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "bird")
+    private Set<Post> posts;
 
     /**
      * Constructs a new {@code Bird} with the specified attributes.

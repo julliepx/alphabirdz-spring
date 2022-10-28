@@ -22,7 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.alphabirdz.controller.PostRestController;
+import com.alphabirdz.model.Bird;
 import com.alphabirdz.model.Post;
+import com.alphabirdz.model.User;
 import com.alphabirdz.repository.PostRepository;
 
 @SpringBootTest(classes = com.alphabirdz.AlphabirdzApplication.class)
@@ -46,7 +48,8 @@ public class PostRestControllerTest {
         this.mockMvc = MockMvcBuilders.standaloneSetup(postRestController)
                     .build();
         
-        post = new Post("url image", "Condado", "2890", 1, 1);
+        post = new Post("url image", "Condado", "2890", new User("profilePhoto", "alphabirdz", "alphabirdz@gmail.com", "123456"),
+        new Bird("englishName", "latinName", "portugueseName", "yellow", "campo seco", "family", "80cm")); //Dont have img nor gender
         posts.add(post);
 
     }
