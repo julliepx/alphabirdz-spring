@@ -81,7 +81,7 @@ INSERT INTO posts(image, location, date ,fk_user, fk_bird)
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
             VALUES ('url bird image', 'sorocaba', '2022-03-21', 3, 1);
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'Estancia Yani Grande', '2021-05-11', 5, 18);
+            VALUES ('url bird image', 'Estancia Yani Grande', '2021-05-11', 0, 18);
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
             VALUES ('url bird image', 'Itapecerica da Serra', '2022-09-16', 2, 9);
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
@@ -89,7 +89,7 @@ INSERT INTO posts(image, location, date ,fk_user, fk_bird)
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
             VALUES ('url bird image', 'Parque Nacional Bernardo OHiggins', '2019-10-11', 3, 3);
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'Pulau Kukup', '2020-09-21', 5, 6);
+            VALUES ('url bird image', 'Pulau Kukup', '2020-09-21', 0, 6);
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)
             VALUES ('url bird image', 'sorocaba', '2021-12-27', 4, 7);
 INSERT INTO posts(image, location, date ,fk_user, fk_bird)

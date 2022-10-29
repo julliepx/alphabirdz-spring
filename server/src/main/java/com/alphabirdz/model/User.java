@@ -1,5 +1,7 @@
 package com.alphabirdz.model;
 
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -21,12 +23,14 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private Boolean loggedIn;
 
     public User(String profilePhoto, String username, String email, String password) {
         this.profilePhoto = profilePhoto;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.loggedIn = false;
     }
 
     protected User() {
@@ -51,6 +55,19 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return Objects.equals(username, user.username) &&
+                Objects.equals(password, user.password);
     }
 
     @Override
