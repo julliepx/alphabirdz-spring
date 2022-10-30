@@ -24,8 +24,6 @@ public class BirdRepositoryTest {
         assertThat(bird.getId()).isEqualTo(1);
         assertThat(bird.getEnglishName()).isEqualTo("black-necked-swan");
     }
-
-
 }
 
 
