@@ -47,6 +47,7 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private Boolean loggedIn;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Post> posts;
@@ -63,6 +64,7 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.loggedIn = false;
     }
 
     /**
@@ -93,5 +95,25 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
+
+    // @Override
+    // public boolean equals(Object o) {
+    //     if (this == o) return true;
+    //     if (!(o instanceof User)) return false;
+    //     User user = (User) o;
+    //     return Objects.equals(username, user.username) &&
+    //             Objects.equals(password, user.password);
+    // }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "User[id=%d, profilePhoto='%s', username='%s', email='%s', password='%s']",
+                id, profilePhoto, username, email, password);
     }
 }

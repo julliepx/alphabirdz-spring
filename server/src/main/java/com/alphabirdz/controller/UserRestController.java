@@ -36,7 +36,6 @@ import com.alphabirdz.repository.UserRepository;
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/users")
 public class UserRestController {
-
     /**
      * Calls the UserRepository class to use its methods.
      */
@@ -74,7 +73,7 @@ public class UserRestController {
     @RequestMapping( value = "/id/{userId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> getId(final @PathVariable long userId){
         final User id = userRepository.findById(userId);
-        if(id == null){
+        if (id == null) {
             return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<User>(id, HttpStatus.OK);
@@ -95,9 +94,38 @@ public class UserRestController {
 	@RequestMapping( value = "/name/{username}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> getUsername(final @PathVariable String username){
         final User name = userRepository.findByUsername(username);
-        if(name == null){
+        if (name == null){
             return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<User>(name, HttpStatus.OK);
-	}
+    }
+
+    @RequestMapping(value = "/add", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<User> saveUser(@RequestBody User user) {
+        User savedUser = userRepository.save(user);
+        return new ResponseEntity<>(savedUser, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<User> loginUser(@RequestBody User user) {
+        User userFound;
+
+        try {
+            userFound = userRepository.findByEmail(user.getEmail());
+        }
+        catch (Exception e) {
+            return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+    }
+
+        if (userFound == null){
+            return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+        }else{
+            if (userFound.getPassword().equals(user.getPassword())){
+                user.setLoggedIn(true);
+                return new ResponseEntity<User>(userFound, HttpStatus.OK);
+            }
+        }
+
+        return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+    }
 }
