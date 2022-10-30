@@ -73,6 +73,8 @@ INSERT INTO users(profile_photo, username, email, password)
             VALUES ('url image', 'chris', 'chris@gmail.com', 'password');
 INSERT INTO users(profile_photo, username, email, password)
             VALUES ('url image', 'fernanda', 'fernanda@gmail.com', 'password');
+INSERT INTO users(profile_photo, username, email, password)
+            VALUES ('url image', 'administrador', 'admin@admin', 'admin');
 
 
 -- Populando tabela Posts
