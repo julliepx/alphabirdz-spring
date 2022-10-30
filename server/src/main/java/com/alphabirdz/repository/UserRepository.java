@@ -47,14 +47,8 @@ public interface UserRepository extends CrudRepository<User, Long> {
      */
     User findById(long id);
 
-<<<<<<< HEAD
-    List<User> findAll();
-
-    List<User> findAllById(long ids);
-=======
     /**
      * Returns a list of all Users.
      */
     List<User> findAll();
->>>>>>> 31acff822a34a6dcde3496819322db47576fef54
 }

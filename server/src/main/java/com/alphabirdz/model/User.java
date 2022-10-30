@@ -5,7 +5,6 @@
 
 package com.alphabirdz.model;
 
-import java.util.Objects;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -102,14 +101,14 @@ public class User {
         this.loggedIn = loggedIn;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof User)) return false;
-        User user = (User) o;
-        return Objects.equals(username, user.username) &&
-                Objects.equals(password, user.password);
-    }
+    // @Override
+    // public boolean equals(Object o) {
+    //     if (this == o) return true;
+    //     if (!(o instanceof User)) return false;
+    //     User user = (User) o;
+    //     return Objects.equals(username, user.username) &&
+    //             Objects.equals(password, user.password);
+    // }
 
     @Override
     public String toString() {
