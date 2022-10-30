@@ -76,28 +76,6 @@ INSERT INTO users(profile_photo, username, email, password)
 
 
 -- Populando tabela Posts
-<<<<<<< HEAD
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'santo domingo de cachi', '2021-09-19', 1, 10);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'sorocaba', '2022-03-21', 3, 1);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'Estancia Yani Grande', '2021-05-11', 0, 18);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'Itapecerica da Serra', '2022-09-16', 2, 9);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'El Calafate', '2021-09-09', 4, 1);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'Parque Nacional Bernardo OHiggins', '2019-10-11', 3, 3);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'Pulau Kukup', '2020-09-21', 0, 6);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'sorocaba', '2021-12-27', 4, 7);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'Itapecerica da Serra', '2021-11-30', 2, 5);
-INSERT INTO posts(image, location, date ,fk_user, fk_bird)
-            VALUES ('url bird image', 'santo domingo de cachi', '2022-01-17', 1, 10);
-=======
 INSERT INTO posts(image, location, date ,user_id, bird_id)
             VALUES ('https://cdn.discordapp.com/attachments/1034847672324075530/1035204263271477349/unknown.png', 'santo domingo de cachi', '2021-09-19', 1, 10);
 INSERT INTO posts(image, location, date ,user_id, bird_id)
@@ -118,4 +96,3 @@ INSERT INTO posts(image, location, date ,user_id, bird_id)
             VALUES ('https://cdn.discordapp.com/attachments/1034847672324075530/1035208364499681401/unknown.png', 'Itapecerica da Serra', '2021-11-30', 2, 5);
 INSERT INTO posts(image, location, date ,user_id, bird_id)
             VALUES ('https://cdn.discordapp.com/attachments/1034847672324075530/1035208532481560608/unknown.png', 'santo domingo de cachi', '2022-01-17', 1, 10);
->>>>>>> 31acff822a34a6dcde3496819322db47576fef54
