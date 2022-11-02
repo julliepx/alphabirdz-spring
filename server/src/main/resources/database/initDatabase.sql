@@ -28,7 +28,8 @@ CREATE TABLE posts (
     image VARCHAR(255),
     location VARCHAR(255),
     date VARCHAR(255),
-    fk_user INTEGER,
-    fk_bird INTEGER
+    user_id INTEGER NOT NULL,
+    bird_id INTEGER NOT NULL,
 );
---ALTER TABLE posts ADD CONSTRAINT fk_user FOREIGN KEY (id) REFERENCES posts (id);
+ALTER TABLE posts ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users (id);
+ALTER TABLE posts ADD CONSTRAINT fk_bird_id FOREIGN KEY (bird_id) REFERENCES birds (id);
