@@ -81,4 +81,10 @@ public class PostRestController {
         }
         return new ResponseEntity<>(id, HttpStatus.OK);
     }
+
+    @RequestMapping (value = "/add", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Post> saveUser(@RequestBody Post post){
+        Post savedPost = postRepository.save(post);
+        return new ResponseEntity<>(savedPost, HttpStatus.OK);
+    }
 }

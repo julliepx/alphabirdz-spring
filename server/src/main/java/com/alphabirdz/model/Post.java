@@ -53,6 +53,13 @@ public class Post {
     private Bird bird;
 
     /**
+     * Empty constructor.
+     */
+    protected Post() {
+
+    }
+
+    /**
      * Constructs a new {@code Post} with the specified attributes.
      * @param image
      * @param location
@@ -66,13 +73,6 @@ public class Post {
         this.date = date;
         this.user = user;
         this.bird = bird;
-    }
-
-    /**
-     * Empty constructor.
-     */
-    protected Post() {
-
     }
 
     /**
