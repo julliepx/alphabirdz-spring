@@ -1,4 +1,4 @@
-### iniciando o projeto
+### Iniciando o projeto
 
 Considerando que já tenha instalados o gerenciador de dependências Gradle, e alguma versão do java SDK.
 
