@@ -34,7 +34,7 @@ import com.alphabirdz.repository.PostRepository;
  */
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://alphabirdz-spring.onrender.com")
 @RequestMapping("/posts")
 public class PostRestController {
 

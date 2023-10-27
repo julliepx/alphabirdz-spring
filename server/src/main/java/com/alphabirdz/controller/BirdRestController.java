@@ -33,7 +33,7 @@ import com.alphabirdz.repository.BirdRepository;
  */
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://alphabirdz-spring.onrender.com")
 @RequestMapping("/birds")
 public class BirdRestController {
 
